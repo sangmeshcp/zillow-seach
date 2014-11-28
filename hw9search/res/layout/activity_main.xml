@@ -1,0 +1,149 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+    
+<RelativeLayout
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/street_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/street_address"
+        android:textColor="#F7B016"
+        android:textSize="@dimen/desc" />
+
+    <EditText
+        android:id="@+id/street_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/street_desc"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="@string/enter_address" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/err_street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/street_add"
+        android:layout_toRightOf="@+id/street_desc"
+        android:text="@string/Null"
+        android:textColor="#F50000"
+        android:textSize="@dimen/err" />
+
+    <TextView
+        android:id="@+id/city_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/err_street"
+        android:layout_marginTop="17dp"
+        android:text="@string/city"
+        android:textColor="#F7B016"
+        android:textSize="@dimen/desc" />
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/city_desc"
+        android:ems="10"
+        android:background="#fff"
+        android:hint="@string/enter_city" >
+
+        <requestFocus android:layout_width="wrap_content" />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/state_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/err_city"
+        android:text="@string/state"
+        android:textColor="#F7B016"
+        android:textSize="@dimen/desc" />
+
+    <Spinner
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/state_desc"
+        android:layout_marginTop="22dp"
+        android:entries="@array/states"
+        android:background="#fff"
+        android:dropDownWidth="match_parent" />
+
+    <TextView
+        android:id="@+id/err_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/err_city"
+        android:layout_below="@+id/state"
+        android:text="@string/Null"
+        android:textColor="#F50000"
+        android:textSize="@dimen/err" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/err_state"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/search"
+        android:background="#F7B016" />
+
+    <TextView
+        android:id="@+id/err_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/street_desc"
+        android:text="@string/Null"
+        android:textColor="#F50000"
+        android:textSize="@dimen/err" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/search"
+        android:layout_toRightOf="@+id/street_desc"
+        android:src="@drawable/zillowlogo" />
+
+    <TextView
+        android:id="@+id/addressnotfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="14dp"
+        android:text="@string/Null"
+        android:textColor="#F50000"
+        android:textSize="@dimen/desc" />
+
+</RelativeLayout>
+
+</LinearLayout>
